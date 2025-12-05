@@ -69,6 +69,12 @@
         .auto-style3 {
             color: #66FF66;
         }
+        .auto-style4 {
+            text-align: left;
+        }
+        .auto-style5 {
+            width: 47%;
+        }
     </style>
 
 </head>
@@ -83,17 +89,17 @@
             <!-- Bảng thông tin khách hàng -->
             <table>
                 <tr>
-                    <td style="width:150px;" class="auto-style1">Khách hàng:</td>
+                    <td style="width:150px;" class="auto-style4">Khách hàng:</td>
                     <td style="text-align: left"><asp:TextBox ID="txtKH" runat="server" Width="467px" CssClass="box" /></td>
                 </tr>
 
                 <tr>
-                    <td class="auto-style1">Địa chỉ:</td>
+                    <td class="auto-style4">Địa chỉ:</td>
                     <td style="text-align: left"><asp:TextBox ID="txtDiaChi" runat="server" Width="466px" CssClass="box" /></td>
                 </tr>
 
                 <tr>
-                    <td class="auto-style1">Mã số thuế:</td>
+                    <td class="auto-style4">Mã số thuế:</td>
                     <td style="text-align: left"><asp:TextBox ID="txtMST" runat="server" Width="462px" CssClass="box" /></td>
                 </tr>
             </table>
@@ -117,7 +123,7 @@
                         <asp:Button ID="btnThem" runat="server" Text=">" Width="40" OnClick="btnThem_Click" />
                     </td>
 
-                    <td style="width:35%;">
+                    <td class="auto-style5">
                         <span class="auto-style2">Danh sách bánh được đặt:</span><br />
                         <asp:ListBox ID="lstBanh" runat="server" Width="200" Height="130"></asp:ListBox>
                     </td>
