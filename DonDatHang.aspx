@@ -30,9 +30,8 @@
         }
 
         .box {
-            padding: 5px;
+            padding: 6px;
             font-size: 15px;
-            text-align: left;
         }
 
         .btn {
@@ -44,6 +43,12 @@
             color: white;
             font-weight: bold;
             text-align: center;
+        }
+
+        .btnSmall {
+            width: 40px;
+            padding: 4px;
+            font-weight: bold;
         }
 
         .hoaDon {
@@ -61,19 +66,18 @@
             font-weight: bold;
         }
         .auto-style1 {
+            width: 52%;
             text-align: center;
         }
         .auto-style2 {
-            color: #33CC33;
+            text-align: left;
         }
         .auto-style3 {
             color: #66FF66;
+            font-weight: bold;
         }
         .auto-style4 {
-            text-align: left;
-        }
-        .auto-style5 {
-            width: 47%;
+            color: #66FF66;
         }
     </style>
 
@@ -86,51 +90,57 @@
 
             <div class="tieuDe">ĐƠN ĐẶT HÀNG</div>
 
-            <!-- Bảng thông tin khách hàng -->
+            <!-- Thông tin khách hàng -->
             <table>
                 <tr>
-                    <td style="width:150px;" class="auto-style4">Khách hàng:</td>
-                    <td style="text-align: left"><asp:TextBox ID="txtKH" runat="server" Width="467px" CssClass="box" /></td>
+                    <td style="width:150px;" class="auto-style2">Khách hàng:</td>
+                    <td><asp:TextBox ID="txtKH" runat="server" CssClass="box" Width="452px" /></td>
                 </tr>
 
                 <tr>
-                    <td class="auto-style4">Địa chỉ:</td>
-                    <td style="text-align: left"><asp:TextBox ID="txtDiaChi" runat="server" Width="466px" CssClass="box" /></td>
+                    <td class="auto-style2">Địa chỉ:</td>
+                    <td><asp:TextBox ID="txtDiaChi" runat="server" CssClass="box" Width="452px" /></td>
                 </tr>
 
                 <tr>
-                    <td class="auto-style4">Mã số thuế:</td>
-                    <td style="text-align: left"><asp:TextBox ID="txtMST" runat="server" Width="462px" CssClass="box" /></td>
+                    <td class="auto-style2">Mã số thuế:</td>
+                    <td><asp:TextBox ID="txtMST" runat="server" CssClass="box" Width="454px" /></td>
                 </tr>
             </table>
 
             <hr />
 
-            <!-- Bảng chọn bánh -->
+            <!-- Chọn bánh -->
             <table>
                 <tr>
-                    <td style="width:45%;" class="auto-style1">
-                        <span class="auto-style3">Chọn các loại bánh sau:</span><br />
-                        <asp:DropDownList ID="ddlBanh" runat="server" Width="250" CssClass="box"></asp:DropDownList>
+                    <td style="width:40%; vertical-align:top;">
+                        <span class="auto-style3">Chọn các loại bánh:</span><br />
+                        <asp:DropDownList ID="ddlBanh" runat="server" Width="250px" CssClass="box"></asp:DropDownList>
 
                         <br /><br />
 
-                        Số lượng:
-                        <asp:TextBox ID="txtSL" runat="server" Width="60" Text="1" CssClass="box" />
+                        SSố lượng:
+                        <asp:TextBox ID="txtSL" runat="server" Width="105px" Text="1" CssClass="box" TextMode="Number">1</asp:TextBox>
                         cái
+
                         <br /><br />
 
-                        <asp:Button ID="btnThem" runat="server" Text=">" Width="40" OnClick="btnThem_Click" />
+                        <asp:Button ID="btnThem" runat="server" Text=">" CssClass="btnSmall" OnClick="btnThem_Click" />
                     </td>
 
-                    <td class="auto-style5">
-                        <span class="auto-style2">Danh sách bánh được đặt:</span><br />
-                        <asp:ListBox ID="lstBanh" runat="server" Width="200" Height="130"></asp:ListBox>
+                    <td style="vertical-align:top;" class="auto-style1">
+                        <span class="auto-style3">Danh sách bánh đặt:<br class="auto-style4" />
+                        <asp:ListBox ID="lstBanh" runat="server" Width="324px" Height="130px" SelectionMode="Multiple"></asp:ListBox>
                     </td>
 
-                    <td style="width:20%; vertical-align:bottom;">
-                        <asp:Button ID="btnXoa" runat="server" Text="Xóa" Width="40" OnClick="btnThem_Click" />
-                    </td>
+                    <td style="vertical-align:bottom;">
+    <asp:ImageButton ID="btnXoa" runat="server" 
+                     ImageUrl="../images/trash.png" 
+                     CssClass="btnSmall" 
+                     OnClick="btnXoa_Click" 
+                     ToolTip="Xóa" />
+</td>
+
                 </tr>
             </table>
 
@@ -139,7 +149,7 @@
 
         </div>
 
-        <!-- Hóa đơn kết quả -->
+        <!-- Hóa đơn -->
         <div class="hoaDon">
             <div class="tieuDeHD">HÓA ĐƠN ĐẶT HÀNG</div>
             <br />
