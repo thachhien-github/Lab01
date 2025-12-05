@@ -24,13 +24,13 @@ namespace Lab01
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// txtKhach control.
+        /// txtKH control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtKhach;
+        protected global::System.Web.UI.WebControls.TextBox txtKH;
 
         /// <summary>
         /// txtDiaChi control.
@@ -69,31 +69,31 @@ namespace Lab01
         protected global::System.Web.UI.WebControls.TextBox txtSL;
 
         /// <summary>
-        /// btnAdd control.
+        /// btnThem control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAdd;
+        protected global::System.Web.UI.WebControls.Button btnThem;
 
         /// <summary>
-        /// btnRemove control.
+        /// lstBanh control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnRemove;
+        protected global::System.Web.UI.WebControls.ListBox lstBanh;
 
         /// <summary>
-        /// lstDat control.
+        /// btnXoa control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox lstDat;
+        protected global::System.Web.UI.WebControls.Button btnXoa;
 
         /// <summary>
         /// btnIn control.
