@@ -33,6 +33,15 @@ namespace Lab01
         protected global::System.Web.UI.WebControls.TextBox txtKH;
 
         /// <summary>
+        /// rfvKhachHang control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvKhachHang;
+
+        /// <summary>
         /// txtDiaChi control.
         /// </summary>
         /// <remarks>
@@ -42,6 +51,15 @@ namespace Lab01
         protected global::System.Web.UI.WebControls.TextBox txtDiaChi;
 
         /// <summary>
+        /// rfvDiaChi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDiaChi;
+
+        /// <summary>
         /// txtMST control.
         /// </summary>
         /// <remarks>
@@ -49,6 +67,15 @@ namespace Lab01
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMST;
+
+        /// <summary>
+        /// rfvMST control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvMST;
 
         /// <summary>
         /// ddlBanh control.
@@ -67,6 +94,24 @@ namespace Lab01
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtSL;
+
+        /// <summary>
+        /// rfvSoLuong control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvSoLuong;
+
+        /// <summary>
+        /// rvSoLuong control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rvSoLuong;
 
         /// <summary>
         /// btnThem control.
@@ -103,6 +148,24 @@ namespace Lab01
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnIn;
+
+        /// <summary>
+        /// vsError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ValidationSummary vsError;
+
+        /// <summary>
+        /// divHoaDon control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divHoaDon;
 
         /// <summary>
         /// lblHoaDon control.

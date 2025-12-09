@@ -14,6 +14,7 @@
             padding: 20px;
             background: #fafff4;
             text-align: center;
+            height: 546px;
         }
 
         .tieuDe {
@@ -46,7 +47,6 @@
         }
 
         .btnSmall {
-            width: 40px;
             padding: 4px;
             font-weight: bold;
         }
@@ -65,19 +65,23 @@
             font-size: 20px;
             font-weight: bold;
         }
+
         .auto-style1 {
             width: 52%;
             text-align: center;
         }
+
         .auto-style2 {
             text-align: left;
         }
+
         .auto-style3 {
-            color: #66FF66;
+            color: #00b248;
             font-weight: bold;
         }
+
         .auto-style4 {
-            color: #66FF66;
+            color: #00b248;
         }
     </style>
 
@@ -90,56 +94,66 @@
 
             <div class="tieuDe">ĐƠN ĐẶT HÀNG</div>
 
-            <!-- Thông tin khách hàng -->
             <table>
                 <tr>
-                    <td style="width:150px;" class="auto-style2">Khách hàng:</td>
-                    <td><asp:TextBox ID="txtKH" runat="server" CssClass="box" Width="452px" /></td>
+                    <td style="width: 150px;" class="auto-style2">Khách hàng:</td>
+                    <td class="auto-style2">
+                        <asp:TextBox ID="txtKH" runat="server" CssClass="box" Width="420px" />
+                        <asp:RequiredFieldValidator ID="rfvKhachHang" runat="server" ControlToValidate="txtKH" ErrorMessage="Vui lòng nhập tên khách hàng!" ForeColor="#CC3300">(*)</asp:RequiredFieldValidator>
+                    </td>
                 </tr>
 
                 <tr>
                     <td class="auto-style2">Địa chỉ:</td>
-                    <td><asp:TextBox ID="txtDiaChi" runat="server" CssClass="box" Width="452px" /></td>
+                    <td class="auto-style2">
+                        <asp:TextBox ID="txtDiaChi" runat="server" CssClass="box" Width="420px" />
+                        <asp:RequiredFieldValidator ID="rfvDiaChi" runat="server" ControlToValidate="txtDiaChi" ErrorMessage="Vui lòng nhập địa chỉ!" ForeColor="#CC3300">(*)</asp:RequiredFieldValidator>
+                    </td>
                 </tr>
 
                 <tr>
                     <td class="auto-style2">Mã số thuế:</td>
-                    <td><asp:TextBox ID="txtMST" runat="server" CssClass="box" Width="454px" /></td>
+                    <td class="auto-style2">
+                        <asp:TextBox ID="txtMST" runat="server" CssClass="box" Width="420px" />
+                        <asp:RequiredFieldValidator ID="rfvMST" runat="server" ControlToValidate="txtMST" ErrorMessage="Vui lòng nhập mã số thuế!" ForeColor="#CC3300">(*)</asp:RequiredFieldValidator>
+                    </td>
                 </tr>
             </table>
 
             <hr />
 
-            <!-- Chọn bánh -->
             <table>
                 <tr>
-                    <td style="width:40%; vertical-align:top;">
+                    <td style="width: 40%; vertical-align: top;">
                         <span class="auto-style3">Chọn các loại bánh:</span><br />
                         <asp:DropDownList ID="ddlBanh" runat="server" Width="250px" CssClass="box"></asp:DropDownList>
 
-                        <br /><br />
+                        <br />
+                        <br />
 
-                        SSố lượng:
-                        <asp:TextBox ID="txtSL" runat="server" Width="105px" Text="1" CssClass="box" TextMode="Number">1</asp:TextBox>
-                        cái
+                        Số lượng:
+                        <asp:TextBox ID="txtSL" runat="server" Width="105px" Text="1" CssClass="box" TextMode="Number"></asp:TextBox>
+                        cái<br />
+                        <asp:RequiredFieldValidator ID="rfvSoLuong" runat="server" ControlToValidate="txtSL" ErrorMessage="Vui lòng nhập số lượng!" ForeColor="#CC3300">(*)</asp:RequiredFieldValidator>
+                        <asp:RangeValidator ID="rvSoLuong" runat="server" ControlToValidate="txtSL" ErrorMessage="Số lượng phải là số nguyên dương!" ForeColor="#CC3300" MinimumValue="1" MaximumValue="10000" Type="Integer">(*)</asp:RangeValidator>
 
-                        <br /><br />
+                        <br />
 
-                        <asp:Button ID="btnThem" runat="server" Text=">" CssClass="btnSmall" OnClick="btnThem_Click" />
+                        <asp:Button ID="btnThem" runat="server" Text=">" CssClass="btnSmall" OnClick="btnThem_Click" Height="35px" Width="35px" />
                     </td>
 
-                    <td style="vertical-align:top;" class="auto-style1">
-                        <span class="auto-style3">Danh sách bánh đặt:<br class="auto-style4" />
+                    <td style="vertical-align: top;" class="auto-style1">
+                        <span class="auto-style3">Danh sách bánh đặt:</span><br class="auto-style4" />
                         <asp:ListBox ID="lstBanh" runat="server" Width="324px" Height="130px" SelectionMode="Multiple"></asp:ListBox>
                     </td>
 
-                    <td style="vertical-align:bottom;">
-    <asp:ImageButton ID="btnXoa" runat="server" 
-                     ImageUrl="../images/trash.png" 
-                     CssClass="btnSmall" 
-                     OnClick="btnXoa_Click" 
-                     ToolTip="Xóa" />
-</td>
+                    <td style="vertical-align: bottom;">
+                        <asp:ImageButton ID="btnXoa" runat="server"
+                            ImageUrl="~/Images/delete.gif"
+                            CssClass="btnSmall"
+                            OnClick="btnXoa_Click"
+                            ToolTip="Xóa" Height="25px" Width="25px" />
+                    </td>
 
                 </tr>
             </table>
@@ -147,10 +161,12 @@
             <br />
             <asp:Button ID="btnIn" runat="server" Text="In đơn đặt hàng" CssClass="btn" OnClick="btnIn_Click" />
 
+            <br />
+            <asp:ValidationSummary ID="vsError" runat="server" ForeColor="#CC3300" style="text-align: left" />
+
         </div>
 
-        <!-- Hóa đơn -->
-        <div class="hoaDon">
+        <div class="hoaDon" ID="divHoaDon" runat="server" Visible="false">
             <div class="tieuDeHD">HÓA ĐƠN ĐẶT HÀNG</div>
             <br />
             <asp:Label ID="lblHoaDon" runat="server" Font-Size="16px"></asp:Label>
